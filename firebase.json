@@ -1,0 +1,10 @@
+{
+  "firebase": "limeblast-thinkster",
+  "public": "dist",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ],
+  "rules": "security-rules.json"
+}
