@@ -1,5 +1,5 @@
 {
-  "firebase": "limeblast-thinkster",
+  "firebase": "brumit",
   "public": "dist",
   "ignore": [
     "firebase.json",

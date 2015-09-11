@@ -21,7 +21,7 @@ var app = angular
     'ngTouch',
     'firebase'
   ])
-  .constant('FIREBASE_URL', 'https://limeblast-thinkster.firebaseio.com/')
+  .constant('FIREBASE_URL', 'https://brumit.firebaseio.com/')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/register', {
