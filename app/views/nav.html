@@ -26,7 +26,7 @@
         <p class="navbar-text">{{ user.profile.username }}</p>
       </li>
       <li ng-show="signedIn()">
-        <a ng-href="#/users/{{ user.profile.uid }}">
+        <a ng-href="#/users/{{ user.uid }}">
           <img ng-src="http://www.gravatar.com/avatar/{{ user.profile.md5_hash }}" class="nav-pic"/>
         </a>
       </li>
