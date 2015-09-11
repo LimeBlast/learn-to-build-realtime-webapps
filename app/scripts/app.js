@@ -1,7 +1,6 @@
 'use strict';
 
-/* global app:true */
-/* exported app */
+/*exported app */
 
 /**
  * @ngdoc overview

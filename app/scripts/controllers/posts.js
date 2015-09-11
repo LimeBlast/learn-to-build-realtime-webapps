@@ -1,5 +1,7 @@
 'use strict';
 
-app.controller('PostsCtrl', function ($scope) {
+/* global app:true */
 
+app.controller('PostsCtrl', function ($scope) {
+  $scope.post = {url: 'http://', title: ''};
 });
