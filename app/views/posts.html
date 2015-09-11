@@ -7,7 +7,7 @@
       <div class="info">
         <a ng-href="{{ post.url }}">
           {{ post.title }}
-          <span class="url">({{ post.url }})</span>
+          <span class="url">({{ post.url | hostnameFromUrl }})</span>
         </a>
       </div>
       <div>
