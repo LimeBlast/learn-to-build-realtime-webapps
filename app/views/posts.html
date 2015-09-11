@@ -1,13 +1,21 @@
-<div ng-repeat="post in posts">
-  <a ng-href="{{post.url}}">{{post.title}}</a>
-  <a ng-href="#/posts/{{post.$id}}">comments</a>
-  <a ng-click="deletePost(post)">delete</a>
-</div>
+<div class="container posts-page">
+  <div class="post row" ng-repeat="post in posts">
+    <div class="col-xs-1">
+    </div>
+    <div class="col-md-9 col-xs-11">
 
-<form ng-submit="submitPost()">
-  <input type="text" ng-model="post.title"/>
-  <input type="text" ng-model="post.url"/>
-  <input type="submit" value="Add Post"/>
-</form>
-Posts: {{posts}}<br/>
-Post: {{post}}
+      <div class="info">
+        <a ng-href="{{ post.url }}">
+          {{ post.title }}
+          <span class="url">({{ post.url }})</span>
+        </a>
+      </div>
+      <div>
+        <span>submitted by <a ng-href="#/users/{{ post.creatorUID }}">{{ post.creator }}</a></span>
+        &mdash;
+        <a ng-href="#/posts/{{ post.$id }}">comments</a>
+        <a ng-click="deletePost(post)">delete</a>
+      </div>
+    </div>
+  </div>
+</div>
