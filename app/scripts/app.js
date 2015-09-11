@@ -1,6 +1,7 @@
 'use strict';
 
-/*exported app */
+/* global app:true */
+/* exported app */
 
 /**
  * @ngdoc overview
@@ -17,8 +18,10 @@ var app = angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'firebase'
   ])
+  .constant('FIREBASE_URL', 'https://limeblast-thinkster.firebaseio.com/')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
