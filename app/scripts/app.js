@@ -28,6 +28,10 @@ var app = angular
         templateUrl: 'views/posts.html',
         controller: 'PostsCtrl'
       })
+      .when('/posts/:postId', {
+        templateUrl: 'views/showpost.html',
+        controller: 'PostViewCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
