@@ -1,5 +1,8 @@
 'use strict';
 
+/* global app:true */
+/* exported app */
+
 /**
  * @ngdoc overview
  * @name angNewsApp
@@ -8,7 +11,7 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('angNewsApp', [
     'ngAnimate',
     'ngCookies',
