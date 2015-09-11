@@ -10,7 +10,7 @@ app.factory('Post', function ($firebase, FIREBASE_URL) {
       return posts.$add(post);
     },
     get: function (postId) {
-      return $firebase(ref.child('posts')).child(postId).$asObject();
+      return $firebase(ref.child('posts').child(postId)).$asObject();
     },
     delete: function (post) {
       return posts.$remove(post);
