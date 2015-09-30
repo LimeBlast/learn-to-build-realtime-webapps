@@ -28,18 +28,18 @@ var app = angular
         templateUrl: 'views/register.html',
         controller: 'AuthCtrl',
         resolve: {
-          user: function (Auth) {
+          user: ['Auth', function (Auth) {
             return Auth.resolveUser();
-          }
+          }]
         }
       })
       .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'AuthCtrl',
         resolve: {
-          user: function (Auth) {
+          user: ['Auth', function (Auth) {
             return Auth.resolveUser();
-          }
+          }]
         }
       })
       .when('/', {
