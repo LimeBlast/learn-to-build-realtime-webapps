@@ -22,7 +22,7 @@ var app = angular
     'firebase'
   ])
   .constant('FIREBASE_URL', 'https://brumit.firebaseio.com/')
-  .config(function ($routeProvider) {
+  .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/register', {
         templateUrl: 'views/register.html',
@@ -57,4 +57,4 @@ var app = angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }]);
