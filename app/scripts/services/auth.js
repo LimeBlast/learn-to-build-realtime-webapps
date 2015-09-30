@@ -1,6 +1,6 @@
 'use strict';
 
-app.factory('Auth', function ($firebaseSimpleLogin, $firebase, FIREBASE_URL, $rootScope) {
+app.factory('Auth', ['$firebaseSimpleLogin', '$firebase', 'FIREBASE_URL', '$rootScope', function ($firebaseSimpleLogin, $firebase, FIREBASE_URL, $rootScope) {
   var ref = new Firebase(FIREBASE_URL);
   var auth = $firebaseSimpleLogin(ref);
 
@@ -48,4 +48,4 @@ app.factory('Auth', function ($firebaseSimpleLogin, $firebase, FIREBASE_URL, $ro
   });
 
   return Auth;
-});
+}]);

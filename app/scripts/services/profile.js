@@ -1,6 +1,6 @@
 'use strict';
 
-app.factory('Profile', function ($window, FIREBASE_URL, $firebase, Post, $q) {
+app.factory('Profile', ['$window', 'FIREBASE_URL', '$firebase', 'Post', '$q', function ($window, FIREBASE_URL, $firebase, Post, $q) {
   var ref = new $window.Firebase(FIREBASE_URL);
 
   var profile = {
@@ -28,4 +28,4 @@ app.factory('Profile', function ($window, FIREBASE_URL, $firebase, Post, $q) {
   };
 
   return profile;
-});
+}]);

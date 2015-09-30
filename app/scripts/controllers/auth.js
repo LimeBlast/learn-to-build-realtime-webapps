@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('AuthCtrl', function ($scope, $location, Auth, user) {
+app.controller('AuthCtrl', ['$scope', '$location', 'Auth', 'user', function ($scope, $location, Auth, user) {
   if (user) {
     $location.path('/');
   }
@@ -25,4 +25,4 @@ app.controller('AuthCtrl', function ($scope, $location, Auth, user) {
       $scope.error = error.toString();
     });
   };
-});
+}]);
