@@ -4,7 +4,6 @@ app.factory('Auth', ['$firebaseSimpleLogin', '$firebase', 'FIREBASE_URL', '$root
   var ref = new Firebase(FIREBASE_URL);
   var auth = $firebaseSimpleLogin(ref);
 
-
   var Auth = {
     register: function (user) {
       return auth.$createUser(user.email, user.password);
@@ -12,7 +11,7 @@ app.factory('Auth', ['$firebaseSimpleLogin', '$firebase', 'FIREBASE_URL', '$root
     createProfile: function (user) {
       var profile = {
         username: user.username,
-        md5Hash: user.md5Hash
+        md5_hash: user.md5_hash
       };
 
       var profileRef = $firebase(ref.child('profile'));
